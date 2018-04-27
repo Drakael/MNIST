@@ -37,9 +37,7 @@ def ajax():
     import base64
     import keras
     from keras.models import load_model
-    # from skimage import transform
     from flask import jsonify
-    # from keras.preprocessing import image
 
     img = request.values['img']
     content = img.split(';')[1]
