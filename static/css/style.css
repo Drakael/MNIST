@@ -1,0 +1,46 @@
+nav{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+form{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px #888888;
+    background: #fceabb; /* Old browsers */
+	background: -moz-linear-gradient(top, #fceabb 0%, #fccd4d 11%, #f8b500 28%, #f8b500 59%, #fbdf93 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #fceabb 0%,#fccd4d 11%,#f8b500 28%,#f8b500 59%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #fceabb 0%,#fccd4d 11%,#f8b500 28%,#f8b500 59%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+    border: 3px solid black;
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+.file-label{
+	width:100%;
+}
+
+#formulaire{
+	display: block;
+	width: 600px;
+}
+#formulaire .field{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
+#canvas{
+    border: solid 1px #333;
+    cursor: pointer;
+    background-color: white;
+    margin-top:5px;
+}
+#guess{
+    font-weight: bold;
+}

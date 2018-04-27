@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"/>
+		<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/functions.js')}}"></script>
+		<!--[if lte IE 8]><script type="text/javascript" src="{{url_for('static', filename='js/excanvas.js')}}"></script><![endif]-->
+		<script type=text/javascript>
+		  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+		</script>
+	</head>
+	<body>
+	  <section class="section">
+	    <div class="container">
+			<form action="Guess" method="post" enctype="multipart/form-data" class="level-item" id="formulaire">
+				<div class="field is-horizontal">
+					<div class="control">
+						<h1 class="title is-3">Number recognition</h1>
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Send a picture</label>
+					<div class="control">
+						<div class="file">
+						  <label class="file-label">
+						    <input class="file-input" type="file" name="img_sent" required="required">
+						    <input class="button is-primary" type="submit" value="Send" id="submit_pic"/>
+						    <span class="file-cta">
+						      <span class="file-icon">
+						        <i class="fas fa-upload"></i>
+						      </span>
+						      <span class="file-label">
+						        File on my computer
+						      </span>
+						    </span>
+						  </label>
+						</div>
+					</div>
+					<div class="control">
+						<div class="file">
+							<label class="label">or just draw</label>
+						</div>
+						<div class="file">
+							<div id="guess"></div>
+						</div>
+					</div>
+					<div class="control">
+						<div class="file">
+							<div id="canvasDiv"></div>
+						</div>
+					</div>
+					<div class="control">
+						<div class="file">
+							<div class="button is-info" id="clear">Clear all</div>
+							<div class="button is-primary" id="submit_canvas">Guess picture</div>
+						</div>
+					</div>
+					<div class="control">
+						<div id="debug"></div>
+					</div>
+				</div>
+			</form>
+	    </div>
+	  </section>
+	</body>
+</html>
